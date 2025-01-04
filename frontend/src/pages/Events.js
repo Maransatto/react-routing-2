@@ -22,6 +22,7 @@ export async function loader() {
     throw new Response(JSON.stringify({ message: "Could not fetch events" }), {
       status: 500,
     });
+    // throw json({ message: "Could not fetch events" }, { status: 500 }); // this was deprecated by the moment of the video
   } else {
     return response;
   }
